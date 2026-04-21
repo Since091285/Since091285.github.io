@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Home — CODE-92 · The Brand of Future</title>
+<meta name="description" content="CODE-92 — A next-generation conglomerate spanning Technology, Media, Education, Lifestyle, and Investment. Based in Riyadh, Saudi Arabia.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--dark:#0D0D0D;--dark2:#141414;--dark3:#1A1A1A;--white:#F5F5F5;--white2:#FFFFFF;--white3:#EBEBEB;--gold:#C9963B;--gold2:#D4A840;--gold3:#E8C06A;--gold-bg:rgba(201,150,59,0.08);--gold-border:rgba(201,150,59,0.25);--muted:#888;--muted2:#555;--text-dark:#111111;--text-mid:#444;}
+html{scroll-behavior:smooth;}
+body{font-family:'Montserrat',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden;}
+h1,h2,h3,h4,.serif{font-family:'Cormorant Garamond',serif;}
+a{color:inherit;text-decoration:none;}
+img{display:block;}
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;height:72px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;background:rgba(13,13,13,0.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(201,150,59,0.1);}
+.nav-logo{display:flex;align-items:center;gap:12px;}
+.nav-logo img{height:38px;width:auto;}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;letter-spacing:5px;color:#F5F5F5;text-transform:uppercase;}
+.nav-brand span{color:#C9963B;}
+.nav-links{display:flex;align-items:center;gap:36px;list-style:none;}
+.nav-links a{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#888;font-weight:500;transition:color .25s;padding-bottom:3px;border-bottom:1px solid transparent;}
+.nav-links a:hover,.nav-links a.active{color:#C9963B;border-bottom-color:rgba(201,150,59,0.5);}
+.nav-cta{border:1px solid rgba(201,150,59,0.35)!important;color:#C9963B!important;padding:8px 20px!important;border-radius:0!important;}
+.nav-cta:hover{background:rgba(201,150,59,0.1)!important;}
+.footer{background:#0D0D0D;border-top:1px solid rgba(201,150,59,0.12);padding:60px 6% 32px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:48px;}
+.footer-brand-img{height:44px;width:auto;margin-bottom:16px;}
+.footer-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;letter-spacing:5px;text-transform:uppercase;color:#F5F5F5;margin-bottom:10px;}
+.footer-name span{color:#C9963B;}
+.footer-tagline{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#555;}
+.footer-col h4{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:#C9963B;margin-bottom:20px;font-family:'Montserrat',sans-serif;font-weight:600;}
+.footer-col ul{list-style:none;}
+.footer-col li{margin-bottom:10px;}
+.footer-col a{font-size:11px;color:#666;letter-spacing:0.5px;transition:color .2s;}
+.footer-col a:hover{color:#C9963B;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.05);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-bottom p{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#444;}
+.s-label{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+.s-label-line{width:32px;height:1px;background:#C9963B;}
+.s-label-text{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:#C9963B;font-weight:600;}
+.btn-gold{display:inline-block;background:#C9963B;color:#000;font-size:9px;letter-spacing:3px;text-transform:uppercase;font-weight:700;padding:13px 32px;font-family:'Montserrat',sans-serif;transition:background .25s,transform .15s;}
+.btn-gold:hover{background:#D4A840;transform:translateY(-1px);}
+.btn-outline{display:inline-block;border:1px solid rgba(201,150,59,0.35);color:#C9963B;font-size:9px;letter-spacing:3px;text-transform:uppercase;font-weight:500;padding:13px 32px;font-family:'Montserrat',sans-serif;transition:all .25s;}
+.btn-outline:hover{background:rgba(201,150,59,0.08);border-color:#C9963B;}
+.btn-dark{display:inline-block;background:#111;color:#F5F5F5;font-size:9px;letter-spacing:3px;text-transform:uppercase;font-weight:600;padding:13px 32px;font-family:'Montserrat',sans-serif;border:1px solid #333;transition:all .25s;}
+.btn-dark:hover{border-color:#C9963B;color:#C9963B;}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.rd1{transition-delay:.1s;}.rd2{transition-delay:.2s;}.rd3{transition-delay:.3s;}.rd4{transition-delay:.4s;}
+.page-hero{padding:160px 6% 80px;background:#0D0D0D;position:relative;overflow:hidden;}
+.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,150,59,0.2),transparent);}
+.page-hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,150,59,0.06) 0%,transparent 65%);top:-200px;right:-200px;pointer-events:none;}
+.page-hero h1{font-size:clamp(52px,8vw,110px);font-weight:300;color:#F5F5F5;letter-spacing:-1px;margin-bottom:16px;position:relative;z-index:1;}
+.page-hero h1 em{font-style:italic;color:#C9963B;}
+.page-hero-sub{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#666;max-width:460px;line-height:2;position:relative;z-index:1;}
+@media(max-width:860px){.footer-grid{grid-template-columns:1fr 1fr;gap:36px;}}
+@media(max-width:540px){.footer-grid{grid-template-columns:1fr;}}
+
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 6% 80px;background:#0D0D0D;position:relative;overflow:hidden;}
+.hero-glow{position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(201,150,59,0.07) 0%,transparent 60%);top:-300px;right:-300px;pointer-events:none;}
+.hero-glow2{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,150,59,0.04) 0%,transparent 60%);bottom:5%;left:3%;pointer-events:none;}
+.hero-vline{position:absolute;left:6%;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,rgba(201,150,59,0.15),transparent);}
+.hero-inner{position:relative;z-index:1;max-width:800px;}
+.hero-eyebrow{display:flex;align-items:center;gap:16px;margin-bottom:40px;}
+.hero-eyebrow-line{width:48px;height:1px;background:#C9963B;}
+.hero-eyebrow-text{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:#C9963B;font-weight:600;}
+.hero h1{font-size:clamp(72px,11vw,148px);font-weight:300;color:#F5F5F5;line-height:.95;letter-spacing:-2px;margin-bottom:0;}
+.hero h1 .it{font-style:italic;color:#C9963B;}
+.hero h1 .dim{color:rgba(245,245,245,0.35);font-weight:200;}
+.hero-rule{width:80px;height:1px;background:linear-gradient(90deg,#C9963B,transparent);margin:36px 0;}
+.hero-sub{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#666;line-height:2.2;max-width:440px;margin-bottom:48px;}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
+.hero-scroll{position:absolute;bottom:44px;left:6%;display:flex;align-items:center;gap:12px;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:#444;}
+.hero-scroll-line{width:48px;height:1px;background:#444;animation:hsl 2s ease-in-out infinite;}
+@keyframes hsl{0%,100%{width:48px;}50%{width:20px;}}
+.hero-year{position:absolute;right:4%;bottom:24px;font-family:'Cormorant Garamond',serif;font-size:160px;font-weight:300;color:rgba(201,150,59,0.03);letter-spacing:-8px;user-select:none;line-height:1;}
+
+.ticker{border-top:1px solid rgba(201,150,59,0.1);border-bottom:1px solid rgba(201,150,59,0.1);background:#0D0D0D;padding:14px 0;overflow:hidden;}
+.ticker-track{display:flex;animation:tick 28s linear infinite;width:max-content;}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tick-item{display:flex;align-items:center;gap:20px;padding:0 44px;white-space:nowrap;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:#555;}
+.tick-gem{color:#C9963B;font-size:7px;}
+
+/* HOME SECTIONS */
+.home-about{padding:120px 6%;background:#F5F5F5;}
+.home-about-inner{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center;}
+.about-logo-display{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;}
+.about-logo-frame{background:#0D0D0D;padding:60px;display:flex;align-items:center;justify-content:center;width:100%;}
+.about-logo-frame img{width:200px;height:auto;}
+.about-logo-caption{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:#999;text-align:center;}
+.about-text h2{font-size:clamp(40px,5vw,68px);font-weight:300;color:#111;margin-bottom:24px;letter-spacing:-0.5px;}
+.about-text h2 em{font-style:italic;color:#C9963B;}
+.about-text p{font-size:13px;color:#555;line-height:2;font-weight:300;letter-spacing:0.3px;margin-bottom:20px;}
+.about-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px;}
+.fact{background:#0D0D0D;padding:24px 20px;text-align:center;}
+.fact-num{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:#C9963B;line-height:1;}
+.fact-num span{color:#D4A840;}
+.fact-label{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:#666;margin-top:6px;}
+
+.home-divs{padding:120px 6%;background:#111111;}
+.home-divs-header{margin-bottom:70px;}
+.home-divs-header h2{font-size:clamp(40px,5vw,72px);font-weight:300;color:#F5F5F5;letter-spacing:-0.5px;}
+.home-divs-header h2 em{font-style:italic;color:#C9963B;}
+.divs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(201,150,59,0.08);}
+.div-tile{background:#111111;padding:44px 36px;position:relative;overflow:hidden;cursor:pointer;transition:background .3s;}
+.div-tile:hover{background:#1A1A1A;}
+.div-tile::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:#C9963B;transform:scaleX(0);transform-origin:left;transition:transform .35s;}
+.div-tile:hover::before{transform:scaleX(1);}
+.div-tile-num{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:#444;margin-bottom:20px;}
+.div-tile h3{font-size:26px;font-weight:400;color:#F5F5F5;margin-bottom:10px;}
+.div-tile p{font-size:11px;color:#666;line-height:1.8;letter-spacing:0.3px;}
+.div-tile-arrow{position:absolute;bottom:36px;right:36px;color:#C9963B;font-size:18px;opacity:0;transition:opacity .25s,transform .2s;}
+.div-tile:hover .div-tile-arrow{opacity:1;transform:translate(3px,-3px);}
+.div-tile.ft{grid-column:span 2;}
+.div-tile.ft h3{font-size:36px;}
+.divs-cta{margin-top:40px;text-align:center;}
+
+.home-manifesto{padding:140px 6%;background:#F5F5F5;text-align:center;position:relative;overflow:hidden;}
+.manifesto-wm{position:absolute;font-family:'Cormorant Garamond',serif;font-size:clamp(120px,18vw,240px);font-weight:300;color:rgba(0,0,0,0.04);letter-spacing:-8px;user-select:none;top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;}
+.manifesto-inner{position:relative;z-index:1;}
+.manifesto-q{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,56px);font-weight:300;font-style:italic;color:#111;line-height:1.45;max-width:880px;margin:0 auto 32px;}
+.manifesto-q .gold{color:#C9963B;}
+.manifesto-attr{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:#999;}
+.home-cta{padding:100px 6%;background:#0D0D0D;text-align:center;}
+.home-cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,6vw,80px);font-weight:300;color:#F5F5F5;margin-bottom:24px;letter-spacing:-0.5px;}
+.home-cta h2 em{font-style:italic;color:#C9963B;}
+.home-cta p{font-size:12px;letter-spacing:1.5px;color:#666;margin-bottom:40px;text-transform:uppercase;}
+.home-cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+@media(max-width:860px){.home-about-inner{grid-template-columns:1fr;gap:48px;}.divs-grid{grid-template-columns:1fr;}.div-tile.ft{grid-column:span 1;}.div-tile.ft h3{font-size:26px;}}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="nav-logo"><img src="logo.png" alt="CODE-92"><span class="nav-brand">CODE<span>-92</span></span></div><ul class="nav-links"><li><a href="index.html" class="active">Home</a></li><li><a href="divisions.html" >Divisions</a></li><li><a href="leadership.html" >Leadership</a></li><li><a href="ventures.html" >Ventures</a></li><li><a href="contact.html" class="nav-cta">Contact</a></li></ul></nav>
+
+<section class="hero">
+  <div class="hero-glow"></div><div class="hero-glow2"></div><div class="hero-vline"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow"><span class="hero-eyebrow-line"></span><span class="hero-eyebrow-text">Established 2025 · Riyadh, Saudi Arabia</span></div>
+    <h1>THE<br><span class="it">Brand</span><br>OF <span class="dim">Future</span></h1>
+    <div class="hero-rule"></div>
+    <p class="hero-sub">Technology · Media · Education<br>Lifestyle · Real Estate · Investment</p>
+    <div class="hero-actions"><a href="divisions.html" class="btn-gold">Explore Divisions</a><a href="leadership.html" class="btn-outline">Our Leadership</a></div>
+  </div>
+  <div class="hero-scroll"><span class="hero-scroll-line"></span>Scroll</div>
+  <div class="hero-year">92</div>
+</section>
+
+<div class="ticker"><div class="ticker-track">
+  <span class="tick-item"><span class="tick-gem">◆</span>Technology</span><span class="tick-item"><span class="tick-gem">◆</span>Media &amp; Content</span><span class="tick-item"><span class="tick-gem">◆</span>Education</span><span class="tick-item"><span class="tick-gem">◆</span>Lifestyle</span><span class="tick-item"><span class="tick-gem">◆</span>Real Estate</span><span class="tick-item"><span class="tick-gem">◆</span>Investment</span><span class="tick-item"><span class="tick-gem">◆</span>Innovation</span><span class="tick-item"><span class="tick-gem">◆</span>CODE-92</span>
+  <span class="tick-item"><span class="tick-gem">◆</span>Technology</span><span class="tick-item"><span class="tick-gem">◆</span>Media &amp; Content</span><span class="tick-item"><span class="tick-gem">◆</span>Education</span><span class="tick-item"><span class="tick-gem">◆</span>Lifestyle</span><span class="tick-item"><span class="tick-gem">◆</span>Real Estate</span><span class="tick-item"><span class="tick-gem">◆</span>Investment</span><span class="tick-item"><span class="tick-gem">◆</span>Innovation</span><span class="tick-item"><span class="tick-gem">◆</span>CODE-92</span>
+</div></div>
+
+<section class="home-about">
+  <div class="home-about-inner">
+    <div class="about-logo-display reveal">
+      <div class="about-logo-frame"><img src="logo.png" alt="CODE-92 Logo"></div>
+      <div class="about-logo-caption">CODE-92 · The Brand of Future</div>
+    </div>
+    <div class="about-text reveal rd1">
+      <div class="s-label"><span class="s-label-line"></span><span class="s-label-text">Who We Are</span></div>
+      <h2>One brand.<br><em>Every frontier.</em></h2>
+      <p>CODE-92 is a next-generation conglomerate built in Riyadh with global ambitions. We operate across six high-growth sectors — crafting products, brands, and experiences that define what comes next.</p>
+      <p>The name carries our identity: <em>CODE</em> — technology and creation. <em>92</em> — Pakistan's country code, our heritage, our roots, our pride.</p>
+      <div class="about-facts">
+        <div class="fact"><div class="fact-num">5<span>+</span></div><div class="fact-label">Divisions</div></div>
+        <div class="fact"><div class="fact-num">2<span>+</span></div><div class="fact-label">Apps Live</div></div>
+        <div class="fact"><div class="fact-num">∞</div><div class="fact-label">Possibilities</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-divs">
+  <div class="home-divs-header reveal">
+    <div class="s-label"><span class="s-label-line"></span><span class="s-label-text">Our Divisions</span></div>
+    <h2>Six sectors.<br><em>One vision.</em></h2>
+  </div>
+  <div class="divs-grid">
+    <div class="div-tile ft reveal">
+      <div class="div-tile-num">01 — Flagship</div>
+      <h3>CODE-92 Technology</h3>
+      <p>Smart mobile applications and digital platforms. Building tools that simplify life — from personal finance to children's creativity. Available globally on Google Play.</p>
+      <span class="div-tile-arrow">↗</span>
+    </div>
+    <div class="div-tile reveal rd1"><div class="div-tile-num">02</div><h3>Media</h3><p>AI-generated content, animated series, and digital storytelling for global audiences.</p><span class="div-tile-arrow">↗</span></div>
+    <div class="div-tile reveal rd2"><div class="div-tile-num">03</div><h3>Education</h3><p>Next-generation learning tools for children and professionals. Safe, purposeful, effective.</p><span class="div-tile-arrow">↗</span></div>
+    <div class="div-tile reveal rd3"><div class="div-tile-num">04</div><h3>Lifestyle</h3><p>Premium lifestyle products, fashion, and branded experiences curated for the modern world.</p><span class="div-tile-arrow">↗</span></div>
+    <div class="div-tile ft reveal rd4"><div class="div-tile-num">05 — Ventures</div><h3>Real Estate &amp; Investment</h3><p>Strategic investments in real estate, startups, and high-growth markets across the MENA region.</p><span class="div-tile-arrow">↗</span></div>
+  </div>
+  <div class="divs-cta reveal"><a href="divisions.html" class="btn-outline" style="margin-top:16px;">View All Divisions</a></div>
+</section>
+
+<section class="home-manifesto">
+  <div class="manifesto-wm">92</div>
+  <div class="manifesto-inner reveal">
+    <div class="s-label" style="justify-content:center;margin-bottom:40px;"><span class="s-label-line"></span><span class="s-label-text">Our Manifesto</span><span class="s-label-line" style="transform:scaleX(-1)"></span></div>
+    <p class="manifesto-q">"We don't follow trends — we build <span class="gold">what comes next.</span> From Riyadh to the world, CODE-92 is the brand of future."</p>
+    <p class="manifesto-attr">— CODE-92 · Est. 2025</p>
+  </div>
+</section>
+
+<section class="home-cta">
+  <h2 class="reveal">Ready to<br><em>connect?</em></h2>
+  <p class="reveal rd1">Partners · Investors · Collaborators</p>
+  <div class="home-cta-btns reveal rd2">
+    <a href="contact.html" class="btn-gold">Get in Touch</a>
+    <a href="ventures.html" class="btn-outline">Our Ventures</a>
+  </div>
+</section>
+
+<footer class="footer">
+<div class="footer-grid">
+  <div><img class="footer-brand-img" src="logo.png" alt="CODE-92"><div class="footer-name">CODE<span>-92</span></div><div class="footer-tagline">The Brand of Future</div></div>
+  <div class="footer-col"><h4>Divisions</h4><ul><li><a href="divisions.html">Technology</a></li><li><a href="divisions.html">Media</a></li><li><a href="divisions.html">Education</a></li><li><a href="divisions.html">Lifestyle</a></li><li><a href="divisions.html">Ventures</a></li></ul></div>
+  <div class="footer-col"><h4>Company</h4><ul><li><a href="leadership.html">Leadership</a></li><li><a href="ventures.html">Our Ventures</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+  <div class="footer-col"><h4>Connect</h4><ul><li><a href="mailto:hello@code-92.com">hello@code-92.com</a></li><li><a href="https://www.code-92.com">www.code-92.com</a></li><li><a href="https://play.google.com/store/apps/developer?id=Code92" target="_blank">Google Play</a></li></ul></div>
+</div>
+<div class="footer-bottom"><p>© 2025 CODE-92 · All Rights Reserved</p><p>Riyadh, Saudi Arabia</p><p>The Brand of Future</p></div>
+</footer>
+<script>const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.08});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));</script>
+</body>
+</html>

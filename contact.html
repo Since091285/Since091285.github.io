@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Contact — CODE-92</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap');*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}:root{--dark:#0D0D0D;--white:#F5F5F5;--gold:#C9963B;--gold2:#D4A840;}html{scroll-behavior:smooth;}body{font-family:'Montserrat',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden;}h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;}a{color:inherit;text-decoration:none;}img{display:block;}.nav{position:fixed;top:0;left:0;right:0;z-index:200;height:72px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;background:rgba(13,13,13,0.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(201,150,59,0.1);}.nav-logo{display:flex;align-items:center;gap:12px;}.nav-logo img{height:38px;width:auto;}.nav-brand{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;letter-spacing:5px;color:#F5F5F5;text-transform:uppercase;}.nav-brand span{color:#C9963B;}.nav-links{display:flex;align-items:center;gap:36px;list-style:none;}.nav-links a{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#888;font-weight:500;transition:color .25s;padding-bottom:3px;border-bottom:1px solid transparent;}.nav-links a:hover,.nav-links a.active{color:#C9963B;border-bottom-color:rgba(201,150,59,0.5);}.nav-cta{border:1px solid rgba(201,150,59,0.35)!important;color:#C9963B!important;padding:8px 20px!important;}.footer{background:#0D0D0D;border-top:1px solid rgba(201,150,59,0.12);padding:60px 6% 32px;}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:48px;}.footer-brand-img{height:44px;width:auto;margin-bottom:16px;}.footer-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;letter-spacing:5px;text-transform:uppercase;color:#F5F5F5;margin-bottom:10px;}.footer-name span{color:#C9963B;}.footer-tagline{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#555;}.footer-col h4{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:#C9963B;margin-bottom:20px;font-family:'Montserrat',sans-serif;font-weight:600;}.footer-col ul{list-style:none;}.footer-col li{margin-bottom:10px;}.footer-col a{font-size:11px;color:#666;letter-spacing:0.5px;transition:color .2s;}.footer-col a:hover{color:#C9963B;}.footer-bottom{border-top:1px solid rgba(255,255,255,0.05);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}.footer-bottom p{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#444;}.s-label{display:flex;align-items:center;gap:14px;margin-bottom:14px;}.s-label-line{width:32px;height:1px;background:#C9963B;}.s-label-text{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:#C9963B;font-weight:600;}.btn-gold{display:inline-block;background:#C9963B;color:#000;font-size:9px;letter-spacing:3px;text-transform:uppercase;font-weight:700;padding:13px 32px;font-family:'Montserrat',sans-serif;transition:background .25s,transform .15s;}.btn-gold:hover{background:#D4A840;transform:translateY(-1px);}.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s ease;}.reveal.visible{opacity:1;transform:translateY(0);}.rd1{transition-delay:.1s;}.rd2{transition-delay:.2s;}.page-hero{padding:160px 6% 80px;background:#0D0D0D;position:relative;overflow:hidden;}.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,150,59,0.2),transparent);}.page-hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,150,59,0.06) 0%,transparent 65%);top:-200px;right:-200px;pointer-events:none;}.page-hero h1{font-size:clamp(52px,8vw,110px);font-weight:300;color:#F5F5F5;letter-spacing:-1px;margin-bottom:16px;position:relative;z-index:1;}.page-hero h1 em{font-style:italic;color:#C9963B;}.page-hero-sub{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#666;max-width:460px;line-height:2;position:relative;z-index:1;}@media(max-width:860px){.footer-grid{grid-template-columns:1fr 1fr;gap:36px;}}@media(max-width:540px){.footer-grid{grid-template-columns:1fr;}}
+.cont-main{padding:100px 6%;background:#F5F5F5;}
+.cont-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+.cont-info h2{font-size:clamp(36px,4.5vw,60px);font-weight:300;color:#111;margin-bottom:20px;letter-spacing:-0.3px;}.cont-info h2 em{font-style:italic;color:#C9963B;}
+.cont-info p{font-size:13px;color:#555;line-height:2;font-weight:300;letter-spacing:0.3px;margin-bottom:40px;}
+.cont-items{display:flex;flex-direction:column;gap:2px;}
+.cont-item{background:#fff;border:1px solid #E8E8E8;padding:24px 28px;display:flex;align-items:center;gap:20px;transition:border-color .2s;}
+.cont-item:hover{border-color:rgba(201,150,59,0.3);}
+.cont-item-icon{width:44px;height:44px;background:#0D0D0D;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.cont-item-icon span{color:#C9963B;font-size:16px;}
+.cont-lbl{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:#AAA;margin-bottom:4px;}
+.cont-val{font-size:14px;color:#111;font-weight:400;}.cont-val a{color:#C9963B;transition:color .2s;}.cont-val a:hover{color:#D4A840;}
+.cont-form-box{background:#fff;border:1px solid #E8E8E8;padding:48px 44px;}
+.cont-form-box h3{font-size:28px;font-weight:300;color:#111;margin-bottom:8px;}
+.cont-form-box .sub{font-size:11px;letter-spacing:1px;color:#AAA;margin-bottom:32px;text-transform:uppercase;}
+.form-group{margin-bottom:20px;}
+.form-group label{display:block;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#888;margin-bottom:8px;font-weight:600;}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:14px 16px;border:1px solid #E0E0E0;background:#FAFAFA;font-size:13px;font-family:'Montserrat',sans-serif;color:#111;outline:none;transition:border-color .2s;appearance:none;}
+.form-group input:focus,.form-group textarea:focus{border-color:#C9963B;background:#fff;}
+.form-group textarea{resize:vertical;min-height:120px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.cont-map{padding:0 6% 100px;background:#F5F5F5;}
+.map-box{background:#0D0D0D;padding:60px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+.map-box-text h3{font-size:32px;font-weight:300;color:#F5F5F5;margin-bottom:8px;}.map-box-text h3 em{font-style:italic;color:#C9963B;}
+.map-box-text p{font-size:11px;letter-spacing:1px;color:#666;text-transform:uppercase;}
+.map-box-loc{display:flex;flex-direction:column;gap:8px;text-align:right;}
+.map-loc-item{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#555;}
+.map-loc-item span{color:#C9963B;}
+@media(max-width:860px){.cont-grid{grid-template-columns:1fr;}.form-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="nav-logo"><img src="logo.png" alt="CODE-92"><span class="nav-brand">CODE<span>-92</span></span></div><ul class="nav-links"><li><a href="index.html" >Home</a></li><li><a href="divisions.html" >Divisions</a></li><li><a href="leadership.html" >Leadership</a></li><li><a href="ventures.html" >Ventures</a></li><li><a href="contact.html" class="nav-cta">Contact</a></li></ul></nav>
+
+<section class="page-hero">
+  <div class="page-hero-glow"></div>
+  <div class="s-label" style="position:relative;z-index:1;"><span class="s-label-line"></span><span class="s-label-text">Contact</span></div>
+  <h1>Let's Build<br><em>Together</em></h1>
+  <p class="page-hero-sub">Partners, investors, collaborators, or admirers — the door is always open.</p>
+</section>
+
+<section class="cont-main">
+  <div class="cont-grid">
+    <div class="cont-info reveal">
+      <div class="s-label"><span class="s-label-line"></span><span class="s-label-text">Get in Touch</span></div>
+      <h2>We'd love to<br><em>hear from you.</em></h2>
+      <p>Whether you have a partnership idea, an investment opportunity, a project collaboration, or simply want to follow the CODE-92 journey — reach out. We respond to every genuine message.</p>
+      <div class="cont-items">
+        <div class="cont-item">
+          <div class="cont-item-icon"><span>✉</span></div>
+          <div><div class="cont-lbl">Email</div><div class="cont-val"><a href="mailto:hello@code-92.com">hello@code-92.com</a></div></div>
+        </div>
+        <div class="cont-item">
+          <div class="cont-item-icon"><span>🌐</span></div>
+          <div><div class="cont-lbl">Website</div><div class="cont-val"><a href="https://www.code-92.com">www.code-92.com</a></div></div>
+        </div>
+        <div class="cont-item">
+          <div class="cont-item-icon"><span>▶</span></div>
+          <div><div class="cont-lbl">Google Play</div><div class="cont-val"><a href="https://play.google.com/store/apps/developer?id=Code92" target="_blank">Code92 Developer Profile</a></div></div>
+        </div>
+        <div class="cont-item">
+          <div class="cont-item-icon"><span>◎</span></div>
+          <div><div class="cont-lbl">Location</div><div class="cont-val">Riyadh, Saudi Arabia 🇸🇦</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cont-form-box reveal rd1">
+      <h3>Send a Message</h3>
+      <div class="sub">Direct enquiry · We reply within 48 hours</div>
+      <form onsubmit="event.preventDefault();this.innerHTML='<div style=text-align:center;padding:40px><p style=font-family:Cormorant+Garamond,serif;font-size:32px;font-weight:300;color:#111>Thank <em style=font-style:italic;color:#C9963B>you.</em></p><p style=font-size:12px;color:#888;margin-top:12px>Your message has been sent. We will be in touch.</p></div>'">
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="Qaiser" required></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Mehmood" required></div>
+        </div>
+        <div class="form-group"><label>Email Address</label><input type="email" placeholder="hello@yourcompany.com" required></div>
+        <div class="form-group"><label>Subject</label>
+          <select><option>Partnership Enquiry</option><option>Investment Interest</option><option>App Feedback</option><option>Media Collaboration</option><option>General Enquiry</option></select>
+        </div>
+        <div class="form-group"><label>Message</label><textarea placeholder="Tell us about your idea, project, or opportunity..."></textarea></div>
+        <button type="submit" class="btn-gold" style="width:100%;text-align:center;border:none;cursor:pointer;">Send Message →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="cont-map">
+  <div class="map-box reveal">
+    <div class="map-box-text">
+      <h3>Based in <em>Riyadh</em>,<br>building for the world.</h3>
+      <p>Saudi Arabia · Pakistan · Global</p>
+    </div>
+    <div class="map-box-loc">
+      <div class="map-loc-item">🇸🇦 <span>Riyadh</span>, Saudi Arabia</div>
+      <div class="map-loc-item">🇵🇰 <span>Jhelum</span>, Punjab, Pakistan</div>
+      <div class="map-loc-item">🌍 <span>Global</span> · code-92.com</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="footer-grid"><div><img class="footer-brand-img" src="logo.png" alt="CODE-92"><div class="footer-name">CODE<span>-92</span></div><div class="footer-tagline">The Brand of Future</div></div><div class="footer-col"><h4>Divisions</h4><ul><li><a href="divisions.html">Technology</a></li><li><a href="divisions.html">Media</a></li><li><a href="divisions.html">Education</a></li><li><a href="divisions.html">Lifestyle</a></li><li><a href="divisions.html">Ventures</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="leadership.html">Leadership</a></li><li><a href="ventures.html">Our Ventures</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Connect</h4><ul><li><a href="mailto:hello@code-92.com">hello@code-92.com</a></li><li><a href="https://www.code-92.com">www.code-92.com</a></li><li><a href="https://play.google.com/store/apps/developer?id=Code92" target="_blank">Google Play</a></li></ul></div></div><div class="footer-bottom"><p>© 2025 CODE-92 · All Rights Reserved</p><p>Riyadh, Saudi Arabia</p><p>The Brand of Future</p></div></footer><script>const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.08});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));</script>
+</body>
+</html>
